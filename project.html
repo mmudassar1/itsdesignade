@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aesop Minimal » Project</title>
+    <link rel="stylesheet" href="./src/styles/main.css" />
+    <link rel="stylesheet" href="./src/styles/layout.css" />
+    <link rel="stylesheet" href="./src/styles/components.css" />
+    <link rel="stylesheet" href="./src/styles/animations.css" />
+    <link rel="stylesheet" href="./src/styles/refinements.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="site-header">
+        <div class="logo">SAVANT</div>
+        <nav class="desktop-nav">
+            <a href="index.html" class="active">Work</a>
+            <a href="services.html">Services</a>
+            <a href="about.html">Agency</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <button class="mobile-nav-toggle" aria-label="Menu">
+            <span></span>
+            <span></span>
+        </button>
+    </header>
+
+    <div class="mobile-menu">
+        <a href="index.html">Work</a>
+        <a href="services.html">Services</a>
+        <a href="about.html">Agency</a>
+        <a href="contact.html">Contact</a>
+    </div>
+
+    <!-- Project Hero -->
+    <section class="section" style="padding-top: 20vh; padding-bottom: 5vh;">
+        <div class="container fade-in-up">
+            <p class="tagline">Branding / Web Design</p>
+            <h1>Aesop Minimal<br>Campaign 2024</h1>
+        </div>
+    </section>
+
+    <!-- Main Visual -->
+    <div class="container fade-in-up delay-1">
+        <img src="https://images.unsplash.com/photo-1600607686527-6fb886090705?q=80&w=2700&auto=format&fit=crop"
+            alt="Aesop Minimal Hero" style="width: 100%; height: auto; display: block;">
+    </div>
+
+    <!-- Project Details -->
+    <section class="section">
+        <div class="container">
+            <div class="grid" style="grid-template-columns: 1fr 2fr; gap: 4rem;">
+                <div class="fade-in-up">
+                    <div class="mb-2">
+                        <h4 style="font-size: 0.9rem; text-transform: uppercase; color: var(--color-text-muted);">Client
+                        </h4>
+                        <p style="color: var(--color-text);">Aesop Skincare</p>
+                    </div>
+                    <div class="mb-2">
+                        <h4 style="font-size: 0.9rem; text-transform: uppercase; color: var(--color-text-muted);">
+                            Services</h4>
+                        <p style="color: var(--color-text);">Strategy, Identity, Web Design, Art Direction</p>
+                    </div>
+                    <div class="mb-2">
+                        <h4 style="font-size: 0.9rem; text-transform: uppercase; color: var(--color-text-muted);">Year
+                        </h4>
+                        <p style="color: var(--color-text);">2024</p>
+                    </div>
+                </div>
+                <div class="fade-in-up delay-1">
+                    <h3 class="mb-1">The Challenge</h3>
+                    <p class="mb-2">
+                        Aesop approached us to reimagine their digital presence for a new minimalist product line. They
+                        wanted an immersive experience that mirrored the tactile quality of their packaging and the
+                        calming nature of their in-store environments.
+                    </p>
+                    <h3 class="mb-1">The Solution</h3>
+                    <p>
+                        We designed a web experience that focuses on negative space, slow interactions, and
+                        high-fidelity texture photography. The typography is understated yet confident, allowing the
+                        product imagery to take center stage. The result is a digital sanctuary that invites users to
+                        pause and explore.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Image Gallery -->
+    <section class="section" style="padding-top: 0;">
+        <div class="container">
+            <div class="grid grid-2" style="grid-template-columns: 1fr 1fr; gap: var(--spacing-md);">
+                <div class="fade-in-up">
+                    <img src="https://images.unsplash.com/photo-1620912189868-39f2852233f2?q=80&w=2670&auto=format&fit=crop"
+                        alt="Detail 1">
+                </div>
+                <div class="fade-in-up delay-1">
+                    <img src="https://images.unsplash.com/photo-1556228578-8c89e6adf883?q=80&w=2670&auto=format&fit=crop"
+                        alt="Detail 2">
+                </div>
+            </div>
+            <div class="fade-in-up" style="margin-top: var(--spacing-md);">
+                <img src="https://images.unsplash.com/photo-1618331835717-801e976710b2?q=80&w=2670&auto=format&fit=crop"
+                    alt="Detail Wide">
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Navigation -->
+    <section class="section" style="border-top: 1px solid var(--color-border);">
+        <div class="container">
+            <div style="display: flex; justify-content: space-between;">
+                <a href="#" class="link-arrow" style="transform: rotate(180deg); display: inline-block;">&larr; Previous
+                    Project</a>
+                <a href="#" class="link-arrow">Next Project</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <div class="logo">SAVANT</div>
+                    <p>Creating digital legacies.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="column">
+                        <h4>Sitemap</h4>
+                        <a href="index.html">Home</a>
+                        <a href="about.html">About</a>
+                        <a href="services.html">Services</a>
+                        <a href="portfolio.html">Work</a>
+                    </div>
+                    <div class="column">
+                        <h4>Socials</h4>
+                        <a href="#">Instagram</a>
+                        <a href="#">LinkedIn</a>
+                        <a href="#">Twitter</a>
+                        <a href="#">Behance</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Savant Agency. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module" src="./src/js/main.js"></script>
+</body>
+
+</html>

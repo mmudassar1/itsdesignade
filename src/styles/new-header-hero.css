@@ -1,0 +1,132 @@
+/* New Header & Hero Styles matching the user's image */
+
+/* Header Override */
+.site-header {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    padding: 1.5rem 4vw;
+    background: transparent;
+    backdrop-filter: none;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+    transition: background-color 0.3s ease, backdrop-filter 0.3s ease;
+}
+
+.desktop-nav {
+    display: flex !important;
+    /* Force display */
+    gap: 2rem;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 400;
+}
+
+.nav-left {
+    justify-self: start;
+}
+
+.nav-right {
+    justify-self: end;
+}
+
+.logo {
+    font-family: 'Syne', sans-serif;
+    font-size: 1.5rem;
+    /* Standard logo size */
+    font-weight: 700;
+    text-align: center;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    padding: 0;
+    text-align: center;
+}
+
+/* 3D Graphic Placeholder */
+.hero-graphic {
+    width: 400px;
+    height: 400px;
+    background-image: url('https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=2564&auto=format&fit=crop');
+    /* Placeholder until better 3D one found */
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    margin-bottom: -5rem;
+    /* Overlap with text */
+    position: relative;
+    z-index: 2;
+    mask-image: radial-gradient(circle, black 60%, transparent 100%);
+    animation: float 6s ease-in-out infinite;
+}
+
+/* Large Designade Text */
+.hero-title-large {
+    font-family: 'Syne', sans-serif;
+    font-weight: 800;
+    font-size: 12vw;
+    width: 100%;
+    /* Massive */
+    line-height: 0.8;
+    letter-spacing: -0.02em;
+    /* Tighten slightly */
+    color: #fff;
+    position: relative;
+    z-index: 1;
+    margin: 0;
+    text-transform: lowercase;
+    will-change: transform, opacity;
+    transform-origin: center center;
+    /* as per image 'designade' seems lowercase or visually dominated */
+}
+
+/* Hide old elements */
+.hero-content {
+    display: none;
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+    .site-header {
+        display: flex;
+        /* Revert to flex for mobile standard */
+        justify-content: space-between;
+    }
+
+    .desktop-nav {
+        display: none !important;
+    }
+
+    .hero-title-large {
+        font-size: 20vw;
+    }
+
+    .hero-graphic {
+        width: 300px;
+        height: 300px;
+    }
+}

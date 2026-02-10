@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Services » Savant Agency</title>
+    <link rel="stylesheet" href="./src/styles/main.css" />
+    <link rel="stylesheet" href="./src/styles/layout.css" />
+    <link rel="stylesheet" href="./src/styles/components.css" />
+    <link rel="stylesheet" href="./src/styles/animations.css" />
+    <link rel="stylesheet" href="./src/styles/refinements.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="site-header">
+        <div class="logo">SAVANT</div>
+        <nav class="desktop-nav">
+            <a href="index.html">Work</a>
+            <a href="services.html" class="active">Services</a>
+            <a href="about.html">Agency</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <button class="mobile-nav-toggle" aria-label="Menu">
+            <span></span>
+            <span></span>
+        </button>
+    </header>
+
+    <div class="mobile-menu">
+        <a href="index.html">Work</a>
+        <a href="services.html">Services</a>
+        <a href="about.html">Agency</a>
+        <a href="contact.html">Contact</a>
+    </div>
+
+    <!-- Services Hero -->
+    <section class="section" style="padding-top: 15vh;">
+        <div class="container fade-in-up">
+            <p class="tagline">Capabilities</p>
+            <h1>Full-Service Digital<br>Partners.</h1>
+        </div>
+    </section>
+
+    <!-- Detailed Services -->
+    <section class="section">
+        <div class="container">
+            <div class="grid grid-3">
+                <div class="service-card fade-in-up">
+                    <span style="font-size: 2rem; display: block; margin-bottom: 1rem;">✦</span>
+                    <h3>Branding</h3>
+                    <p class="mb-1">We build brands from the core out. Strategy, visual identity, and voice creating a
+                        cohesive narrative.</p>
+                    <ul style="list-style: none; color: var(--color-text-muted); font-size: 0.9rem;">
+                        <li>Brand Strategy</li>
+                        <li>Visual Identity</li>
+                        <li>Art Direction</li>
+                        <li>Guidelines</li>
+                    </ul>
+                </div>
+                <div class="service-card fade-in-up delay-1">
+                    <span style="font-size: 2rem; display: block; margin-bottom: 1rem;">❖</span>
+                    <h3>UI/UX Design</h3>
+                    <p class="mb-1">User-centric design that creates intuitive and delightful digital experiences.</p>
+                    <ul style="list-style: none; color: var(--color-text-muted); font-size: 0.9rem;">
+                        <li>User Research</li>
+                        <li>Wireframing</li>
+                        <li>Prototyping</li>
+                        <li>Interface Design</li>
+                    </ul>
+                </div>
+                <div class="service-card fade-in-up delay-2">
+                    <span style="font-size: 2rem; display: block; margin-bottom: 1rem;">⚡</span>
+                    <h3>Web Development</h3>
+                    <p class="mb-1">Robust, scalable, and high-performance websites built with the latest technologies.
+                    </p>
+                    <ul style="list-style: none; color: var(--color-text-muted); font-size: 0.9rem;">
+                        <li>Frontend Development</li>
+                        <li>CMS Integration</li>
+                        <li>E-commerce</li>
+                        <li>Web Animations</li>
+                    </ul>
+                </div>
+                <div class="service-card fade-in-up">
+                    <span style="font-size: 2rem; display: block; margin-bottom: 1rem;">◎</span>
+                    <h3>Motion Graphics</h3>
+                    <p class="mb-1">Adding depth and dynamism to your brand through 2D and 3D animation.</p>
+                    <ul style="list-style: none; color: var(--color-text-muted); font-size: 0.9rem;">
+                        <li>Logo Reveals</li>
+                        <li>Explainer Videos</li>
+                        <li>Micro-interactions</li>
+                    </ul>
+                </div>
+                <div class="service-card fade-in-up delay-1">
+                    <span style="font-size: 2rem; display: block; margin-bottom: 1rem;">📈</span>
+                    <h3>Digital Marketing</h3>
+                    <p class="mb-1">Data-driven strategies to grow your audience and convert visitors.</p>
+                    <ul style="list-style: none; color: var(--color-text-muted); font-size: 0.9rem;">
+                        <li>SEO</li>
+                        <li>Social Media</li>
+                        <li>Content Strategy</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section cta-section">
+        <div class="container fade-in-up">
+            <h2>Start a project with us?</h2>
+            <a href="contact.html" class="btn btn-primary">Get in Touch</a>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <div class="logo">SAVANT</div>
+                    <p>Creating digital legacies.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="column">
+                        <h4>Sitemap</h4>
+                        <a href="index.html">Home</a>
+                        <a href="about.html">About</a>
+                        <a href="services.html">Services</a>
+                        <a href="portfolio.html">Work</a>
+                    </div>
+                    <div class="column">
+                        <h4>Socials</h4>
+                        <a href="#">Instagram</a>
+                        <a href="#">LinkedIn</a>
+                        <a href="#">Twitter</a>
+                        <a href="#">Behance</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Savant Agency. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module" src="./src/js/main.js"></script>
+</body>
+
+</html>
