@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Syne:wght@400;600;700;800&display=swap');
+
+@import "tailwindcss";
+
+@theme {
+    --color-primary: #ff5500;
+    --color-dark: #1a1a1a;
+    --font-display: "Syne", sans-serif;
+    --font-sans: "Inter", sans-serif;
+
+    --animate-scroll-left: scroll-left 20s linear infinite;
+    --animate-scroll-right: scroll-right 20s linear infinite;
+
+    --tracking-tightest: -0.05em;
+
+    @keyframes scroll-left {
+        from {
+            transform: translateX(0);
+        }
+
+        to {
+            transform: translateX(-50%);
+        }
+    }
+
+    @keyframes scroll-right {
+        from {
+            transform: translateX(-50%);
+        }
+
+        to {
+            transform: translateX(0);
+        }
+    }
+}
+
+/* Base styles without @apply to ensure stability */
+body {
+    background-color: white;
+    color: black;
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
+    margin: 0;
+    cursor: none;
+    /* Hide default cursor */
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Syne', sans-serif;
+    font-weight: 800;
+    margin: 0;
+}
+
+.btn {
+    @apply inline-flex items-center justify-center px-8 py-4 border-2 border-black font-bold uppercase transition-all duration-300;
+}
+
+.btn-primary {
+    @apply bg-black text-white hover:bg-white hover:text-black;
+}
+
+.container {
+    @apply max-w-7xl mx-auto px-6 w-full;
+}
+
+/* Custom Cursor Styles - Absolute standard CSS */
+.custom-cursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 99999;
+    mix-blend-mode: difference;
+    transform: translate(-50%, -50%);
+    transition: width 0.3s ease, height 0.3s ease, background-color 0.3s ease;
+    display: block !important;
+    /* Force display for testing */
+}
+
+.custom-cursor.hovered {
+    width: 80px;
+    height: 80px;
+    background-color: transparent;
+    border: 1px solid #fff;
+    mix-blend-mode: normal;
+}
+
+@media (max-width: 768px) {
+    .custom-cursor {
+        display: none !important;
+    }
+
+    body {
+        cursor: auto;
+    }
+}
+
+.marquee-track {
+    display: inline-flex;
+    width: max-content;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.no-scrollbar {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+/* Gradient mask for scrolling containers */
+.mask-linear {
+    mask-image: linear-gradient(to right, black 85%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to right, black 85%, transparent 100%);
+}
