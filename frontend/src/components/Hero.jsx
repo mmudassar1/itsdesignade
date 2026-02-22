@@ -10,11 +10,11 @@ const Hero = () => {
         offset: ["start start", "end start"]
     });
 
-    const scale = useTransform(scrollYProgress, [0, 1], [1, 1.2]);
+    const scale = useTransform(scrollYProgress, [0, 1], [0.4, 1.1]);
     const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
 
     return (
-        <section ref={sectionRef} className="relative h-[120vh] w-full flex flex-col items-center bg-black overflow-hidden">
+        <section ref={sectionRef} className="relative h-[120vh] w-full flex flex-col items-center overflow-hidden bg-[#000000]">
             {/* Navigation Spacer */}
             <div className="h-[15vh] w-full" />
 
@@ -24,7 +24,7 @@ const Hero = () => {
                     initial={{ scale: 0.8, opacity: 0 }}
                     animate={{ scale: 1, opacity: 1 }}
                     transition={{ duration: 2, ease: [0.22, 1, 0.36, 1] }}
-                    className="relative w-[35vh] h-[35vh] sm:w-[45vh] sm:h-[45vh] md:w-[55vh] md:h-[55vh] lg:w-[65vh] lg:h-[65vh] flex items-center justify-center z-20"
+                    className="relative w-[40vh] h-[40vh] sm:w-[50vh] sm:h-[50vh] md:w-[60vh] md:h-[60vh] lg:w-[70vh] lg:h-[70vh] flex items-center justify-center z-20"
                 >
                     <video
                         src="/video1.mp4"
@@ -32,15 +32,15 @@ const Hero = () => {
                         muted
                         loop
                         playsInline
-                        className="w-[100%] h-[100%] object-cover filter brightness-110 contrast-125 mix-blend-screen"
+                        className="w-[100%] h-[120%] object-cover filter brightness-110 contrast-125"
                     />
                 </motion.div>
 
                 {/* Massive Bottom Text */}
-                <div className="absolute bottom-0 w-full text-center overflow-hidden z-30 pointer-events-none pb-6 sm:pb-8 md:pb-12 px-4">
+                <div className="absolute inset-x-0 bottom-0 text-center overflow-hidden z-30 pointer-events-none pb-0 px-4 mix-blend-difference">
                     <motion.h1
-                        style={{ scale, opacity, willChange: 'transform, opacity', transformOrigin: 'center center' }}
-                        className="text-[16vw] sm:text-[14vw] md:text-[12vw] leading-[0.8] font-extrabold font-display text-white tracking-[-0.02em] select-none lowercase"
+                        style={{ scale, opacity, transformOrigin: 'center center' }}
+                        className="text-[25vw] leading-[0.7] font-black font-display text-white tracking-[-0.05em] select-none lowercase"
                     >
                         digigitz
                     </motion.h1>

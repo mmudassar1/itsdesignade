@@ -35,7 +35,7 @@ const contactSchema = new mongoose.Schema({
     },
     budget: {
         type: String,
-        enum: ['$2000 - $5000', '$5000 - $10000', 'more than $10000', ''],
+        enum: ['$1500 - $5000', '$5000 - $10000', 'more than $10000', ''],
         default: ''
     },
     hearAboutUs: {

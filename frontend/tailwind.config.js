@@ -7,12 +7,14 @@ export default {
     theme: {
         extend: {
             colors: {
-                primary: '#ff5500',
-                dark: '#1a1a1a',
+                white: '#FAF9F6',
+                black: '#111111',
+                primary: '#D4AF37',
+                dark: '#111111',
             },
             fontFamily: {
                 sans: ['Inter', 'sans-serif'],
-                display: ['Syne', 'sans-serif'],
+                display: ['Outfit', 'sans-serif'],
             },
             animation: {
                 'scroll-left': 'scroll-left 20s linear infinite',

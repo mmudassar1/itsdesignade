@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import CustomCursor from './components/CustomCursor';
+import ScrollToHash from './components/ScrollToHash';
 import Home from './pages/Home';
 import About from './pages/About';
 import Services from './pages/Services';
@@ -12,6 +13,10 @@ import Blog from './pages/Blog';
 import Contact from './pages/Contact';
 
 import ServiceDetail from './pages/ServiceDetail';
+
+import BlogDetail from './pages/BlogDetail';
+import Careers from './pages/Careers';
+import PrivacyPolicy from './pages/PrivacyPolicy';
 
 import Lenis from 'lenis';
 
@@ -31,6 +36,7 @@ function App() {
         <Router>
             <div className="relative min-h-screen">
                 <CustomCursor />
+                <ScrollToHash />
                 <Navbar />
                 <main>
                     <Routes>
@@ -40,7 +46,10 @@ function App() {
                         <Route path="/services/:id" element={<ServiceDetail />} />
                         <Route path="/portfolio" element={<Portfolio />} />
                         <Route path="/blog" element={<Blog />} />
+                        <Route path="/blog/:slug" element={<BlogDetail />} />
                         <Route path="/contact" element={<Contact />} />
+                        <Route path="/careers" element={<Careers />} />
+                        <Route path="/privacy" element={<PrivacyPolicy />} />
                     </Routes>
                 </main>
                 <Footer />

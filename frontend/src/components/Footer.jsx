@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
 import { Link } from 'react-router-dom';
-import { Facebook, Instagram } from 'lucide-react';
+import { Facebook, Instagram, ArrowUp } from 'lucide-react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 
 const Footer = () => {
@@ -10,97 +10,114 @@ const Footer = () => {
         offset: ["start end", "end end"]
     });
 
-    const scale = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
-    // const opacity = useTransform(scrollYProgress, [0, 1], [0.5, 1]);
+    const scale = useTransform(scrollYProgress, [0, 1], [0.4, 1]);
 
     const scrollToTop = () => {
         window.scrollTo({ top: 0, behavior: 'smooth' });
     };
 
     return (
-        <footer ref={footerRef} className="bg-black text-white border-t border-[#111] mt-12 sm:mt-16 md:mt-20">
+        <footer ref={footerRef} className="bg-black text-white">
             {/* Massive Brand Logo Header */}
-            <div className="w-full text-center overflow-hidden">
+            <div className="w-full text-center overflow-hidden ">
                 <motion.h2
-                    style={{ scale, willChange: 'transform, opacity', transformOrigin: 'center center' }}
-                    className="text-[16vw] sm:text-[14vw] md:text-[12vw] leading-[0.8] font-extrabold font-display text-white tracking-[-0.02em] py-6 sm:py-8 select-none lowercase"
+                    style={{ scale, transformOrigin: 'center center' }}
+                    className="text-[18vw] leading-[0.7] font-black font-display text-white tracking-[-0.05em] py-20 select-none lowercase "
                 >
                     digigitz
                 </motion.h2>
             </div>
 
             {/* Main Footer Grid */}
-            <div className="px-4 sm:px-6 md:px-[4vw] py-12 sm:py-14 md:py-16 border-t border-[#333]">
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-8 sm:gap-10 md:gap-12">
-                    {/* Tagline & Socials (Spans 2 columns) */}
-                    <div className="md:col-span-2">
-                        <p className="text-lg sm:text-xl md:text-2xl lg:text-[1.5rem] leading-[1.3] font-medium font-display mb-6 sm:mb-8 max-w-lg">
-                            Transforming Ideas into Digital Excellence. Elevate your online presence with our innovative solutions and strategic digital services.
-                        </p>
-                        <div className="flex gap-4 sm:gap-6">
-                            <a href="#" className="text-white hover:opacity-70 transition-opacity">
-                                <Facebook size={20} className="sm:w-6 sm:h-6" fill="currentColor" />
-                            </a>
-                            <a href="#" className="text-white hover:opacity-70 transition-opacity">
-                                <Instagram size={20} className="sm:w-6 sm:h-6" />
-                            </a>
-                        </div>
+            <div className="px-4 sm:px-6 md:px-[6vw] py-10 border-t border-white/10">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-12 lg:gap-8">
+                    {/* Company Column */}
+                    <div className="flex flex-col gap-6">
+                        <h4 className="text-xl sm:text-2xl font-bold font-display tracking-tight">Company</h4>
+                        <ul className="flex flex-col gap-3">
+                            <li><Link to="/about" className="text-sm sm:text-base text-gray-400 font-medium hover:text-white transition-colors">About</Link></li>
+                            <li><Link to="/services" className="text-sm sm:text-base text-gray-400 font-medium hover:text-white transition-colors">Services</Link></li>
+                            <li><Link to="/careers" className="text-sm sm:text-base text-gray-400 font-medium hover:text-white transition-colors">Careers</Link></li>
+                            <li><Link to="/privacy" className="text-sm sm:text-base text-gray-400 font-medium hover:text-white transition-colors">Privacy Policy</Link></li>
+                        </ul>
+                    </div>
+                    <div className="flex flex-col gap-6">
+                        <h4 className="text-xl sm:text-2xl font-bold font-display tracking-tight">Services</h4>
+                        <ul className="flex flex-col gap-3">
+                            <li><Link to="/about" className="text-sm sm:text-base text-gray-400 font-medium hover:text-white transition-colors">Website Development</Link></li>
+                            <li><Link to="/careers" className="text-sm sm:text-base text-gray-400 font-medium hover:text-white transition-colors">UI/UX Design</Link></li>
+                            <li><Link to="/privacy" className="text-sm sm:text-base text-gray-400 font-medium hover:text-white transition-colors">E-Commerce Development</Link></li>
+                            <li><Link to="/privacy" className="text-sm sm:text-base text-gray-400 font-medium hover:text-white transition-colors">Digital Marketing</Link></li>
+                            <li><Link to="/privacy" className="text-sm sm:text-base text-gray-400 font-medium hover:text-white transition-colors">Content Writing</Link></li>
+                            <li><Link to="/privacy" className="text-sm sm:text-base text-gray-400 font-medium hover:text-white transition-colors">Graphic Design</Link></li>
+                            {/* <li><Link to="/privacy" className="text-sm sm:text-base text-gray-400 font-medium hover:text-white transition-colors">Video Editing</Link></li> */}
+                            {/* <li><Link to="/privacy" className="text-sm sm:text-base text-gray-400 font-medium hover:text-white transition-colors">Brand Identity</Link></li> */}
+                        </ul>
                     </div>
 
-                    {/* Services Column */}
-                    <div className="flex flex-col gap-4 sm:gap-6">
-                        <h4 className="text-lg sm:text-xl font-bold font-display">Services</h4>
-                        <ul className="flex flex-col gap-2 sm:gap-3">
-                            <li><Link to="/services" className="text-sm sm:text-base text-[#ccc] font-light hover:text-white transition-colors">Website Development</Link></li>
-                            <li><Link to="/services" className="text-sm sm:text-base text-[#ccc] font-light hover:text-white transition-colors">App Development</Link></li>
-                            <li><Link to="/services" className="text-sm sm:text-base text-[#ccc] font-light hover:text-white transition-colors">Digital Marketing</Link></li>
-                            <li><Link to="/services" className="text-sm sm:text-base text-[#ccc] font-light hover:text-white transition-colors">Graphic Design</Link></li>
-                            <li><Link to="/services" className="text-sm sm:text-base text-[#ccc] font-light hover:text-white transition-colors">Brand Identity</Link></li>
-                            <li><Link to="/services" className="text-sm sm:text-base text-[#ccc] font-light hover:text-white transition-colors">Search Engine Optimization</Link></li>
+                    {/* Portfolio Column */}
+                    <div className="flex flex-col gap-6">
+                        <h4 className="text-xl sm:text-2xl font-bold font-display tracking-tight">Portfolio</h4>
+                        <ul className="flex flex-col gap-3">
+                            <li><Link to="/portfolio" className="text-sm sm:text-base text-gray-400 font-medium hover:text-white transition-colors">Our work</Link></li>
+                            <li><Link to="/showreel" className="text-sm sm:text-base text-gray-400 font-medium hover:text-white transition-colors">Showreel</Link></li>
+                            <li className="flex gap-4 pt-2">
+                                <a href="#" className="text-white hover:opacity-70 transition-opacity">
+                                    <Facebook size={20} fill="currentColor" />
+                                </a>
+                                <a href="#" className="text-white hover:opacity-70 transition-opacity">
+                                    <Instagram size={20} />
+                                </a>
+                                <a href="#" className="text-white hover:opacity-70 transition-opacity font-bold italic">
+                                    Bē
+                                </a>
+                            </li>
                         </ul>
                     </div>
 
                     {/* Our Locations Column */}
-                    <div className="flex flex-col gap-4 sm:gap-6">
-                        <h4 className="text-lg sm:text-xl font-bold font-display">Our Locations</h4>
-                        <ul className="flex flex-col gap-2 sm:gap-3">
-                            <li><span className="text-sm sm:text-base text-[#ccc] font-light">USA</span></li>
-                            <li><span className="text-sm sm:text-base text-[#ccc] font-light">UK</span></li>
-                            <li><span className="text-sm sm:text-base text-[#ccc] font-light">Malaysia</span></li>
-                            <li><span className="text-sm sm:text-base text-[#ccc] font-light">Pakistan</span></li>
+                    <div className="flex flex-col gap-6">
+                        <h4 className="text-xl sm:text-2xl font-bold font-display tracking-tight">Our Locations</h4>
+                        <ul className="flex flex-col gap-3">
+                            <li><Link to="/contact#global-presence" className="text-sm sm:text-base text-gray-400 font-medium hover:text-white transition-colors">USA</Link></li>
+                            <li><Link to="/contact#global-presence" className="text-sm sm:text-base text-gray-400 font-medium hover:text-white transition-colors">UK</Link></li>
+                            <li><Link to="/contact#global-presence" className="text-sm sm:text-base text-gray-400 font-medium hover:text-white transition-colors">Pakistan</Link></li>
+                            <li><Link to="/contact#global-presence" className="text-sm sm:text-base text-gray-400 font-medium hover:text-white transition-colors">Malaysia</Link></li>
                         </ul>
                     </div>
 
-                    {/* Company Column */}
-                    <div className="flex flex-col gap-4 sm:gap-6">
-                        <h4 className="text-lg sm:text-xl font-bold font-display">Company</h4>
-                        <ul className="flex flex-col gap-2 sm:gap-3">
-                            <li><Link to="/about" className="text-sm sm:text-base text-[#ccc] font-light hover:text-white transition-colors">About Us</Link></li>
-                            <li><Link to="/about" className="text-sm sm:text-base text-[#ccc] font-light hover:text-white transition-colors">What Sets Us Apart</Link></li>
-                            <li><Link to="/about" className="text-sm sm:text-base text-[#ccc] font-light hover:text-white transition-colors">Our Origin Story</Link></li>
-                            <li><Link to="/contact" className="text-sm sm:text-base text-[#ccc] font-light hover:text-white transition-colors">Contact Us</Link></li>
-                        </ul>
+                    {/* Logo/Badge Column */}
+                    <div className="flex lg:justify-end items-start md:pt-4">
+                        <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full border-2 border-white flex items-center justify-center -rotate-12 group hover:rotate-0 transition-transform duration-500">
+                            <span className="text-xl sm:text-2xl font-black font-display tracking-tighter">dg!</span>
+                        </div>
                     </div>
                 </div>
             </div>
 
             {/* Bottom Legal Bar */}
-            <div className="px-4 sm:px-6 md:px-[4vw] py-6 sm:py-8 border-t border-[#333] flex flex-col md:flex-row justify-between items-center text-xs sm:text-[0.8rem] text-[#888] font-sans gap-4 md:gap-0">
-                <div className="text-center md:text-left">
+            <div className="px-4 sm:px-6 md:px-[6vw] py-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center text-[10px] sm:text-xs text-gray-500 font-sans gap-6">
+                <div className="font-medium">
                     digigitz | 2025. All rights reserved
                 </div>
 
-                <div className="uppercase text-center md:text-left">
-                    POWERED BY: <span className="text-white">Mudassar</span> <span className="text-[#ff5500]">x</span> <span className="text-white">digigitz</span>
+                <div className="uppercase tracking-widest font-bold flex items-center gap-1">
+                    POWERED BY: <span className="text-white ml-2">mudassar</span> <span className="text-primary text-lg px-1">★</span> <span className="text-white">digigitz</span>
                 </div>
 
-                <button
-                    onClick={scrollToTop}
-                    className="w-9 h-9 sm:w-10 sm:h-10 bg-white text-black rounded-[8px] flex items-center justify-center text-base sm:text-lg hover:-translate-y-1 transition-transform"
-                    aria-label="Scroll to top"
-                >
-                    ↑
-                </button>
+                <div className="flex items-center gap-4">
+                    <button
+                        onClick={scrollToTop}
+                        className="w-10 h-10 sm:w-12 sm:h-12 bg-white text-black rounded-xl flex items-center justify-center hover:-translate-y-1 transition-transform"
+                        aria-label="Scroll to top"
+                    >
+                        <ArrowUp size={20} strokeWidth={2.5} />
+                    </button>
+                    {/* <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl overflow-hidden bg-gray-800">
+                        Representation of the profile/chat icon in the image 
+                        <img src="https://ui-avatars.com/api/?name=User&background=333&color=fff" alt="chat" className="w-full h-full object-cover" />
+                    </div> */}
+                </div>
             </div>
         </footer>
     );

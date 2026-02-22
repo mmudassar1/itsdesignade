@@ -1,5 +1,6 @@
 import React from 'react';
 import ContactForm from '../components/ContactForm';
+import GlobalPresence from '../components/GlobalPresence';
 import { Reveal } from '../components/Reveal';
 
 const Contact = () => {
@@ -10,10 +11,13 @@ const Contact = () => {
                     <h1 className="text-[10vw] sm:text-[9vw] font-black uppercase">Contact</h1>
                 </Reveal>
                 <Reveal delay={0.2}>
-                    <p className="text-lg sm:text-xl md:text-2xl text-gray-400 mt-3 sm:mt-4"></p>
+                    <p className="text-lg sm:text-xl md:text-2xl text-gray-400 mt-3 sm:mt-4">
+                        Let's build something extraordinary together.
+                    </p>
                 </Reveal>
             </div>
             <ContactForm />
+            <GlobalPresence />
         </div>
     );
 };

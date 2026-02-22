@@ -125,17 +125,7 @@ export const services = [
         description: "Optimizing your online presence for better search engine rankings.",
         relatedProjects: []
     },
-    {
-        id: 12,
-        title: "ERP Management System",
-        category: "Business • Software",
-        isLogoCard: true,
-        logoText: "ERP",
-        tags: ["Automation", "Integration", "Data"],
-        bgClass: "bg-slate-600",
-        description: "Streamlining business processes with custom ERP solutions.",
-        relatedProjects: []
-    },
+
     {
         id: 13,
         title: "App Development",

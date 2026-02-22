@@ -14,7 +14,7 @@ const Navbar = () => {
             </nav>
 
             {/* Center Logo */}
-            <Link to="/" className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight lowercase">
+            <Link to="/" className="text-3xl font-display sm:text-4xl md:text-5xl font-black tracking-tight lowercase">
                 digigitz
             </Link>
 
