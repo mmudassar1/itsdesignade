@@ -25,16 +25,16 @@ const Home = () => {
             <Reveal>
                 {/* <Clients /> */}
             </Reveal>
-            <Insights />
+            {/* <Insights /> */}
 
             {/* Secondary Video Section */}
-            <Reveal>
+            {/* <Reveal>
                 <section className="bg-black py-0">
                     <video width="100%" height="auto" controls autoPlay muted loop className="w-full">
                         <source src="/video.mp4" type="video/mp4" />
                     </video>
                 </section>
-            </Reveal>
+            </Reveal> */}
 
             <ContactForm />
         </div>

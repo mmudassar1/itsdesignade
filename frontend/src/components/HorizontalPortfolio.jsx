@@ -8,7 +8,7 @@ import { services } from '../data/services';
 
 const Card = ({ project }) => {
     return (
-        <Link to={`/services/${project.id}`} className="group relative w-[280px] sm:w-[320px] md:w-[400px] lg:w-[450px] h-[500px] sm:h-[550px] md:h-[600px] flex-shrink-0 flex flex-col rounded-2xl sm:rounded-3xl overflow-hidden cursor-pointer hover:shadow-2xl transition-all duration-500">
+        <Link to={`/services/${project.id}`} className="group relative w-[320px] sm:w-[400px] md:w-[500px] lg:w-[600px] h-[550px] sm:h-[600px] md:h-[700px] flex-shrink-0 flex flex-col rounded-2xl sm:rounded-3xl overflow-hidden cursor-pointer hover:shadow-2xl transition-all duration-500">
             {/* Top Section */}
             <div className={`h-[75%] w-full ${project.bgClass} flex items-center justify-center relative overflow-hidden p-4 sm:p-6 md:p-8`}>
                 {project.isTextCard ? (
@@ -18,7 +18,7 @@ const Card = ({ project }) => {
                     </div>
                 ) : project.isLogoCard ? (
                     <div className="z-10 transform transition-transform duration-700 group-hover:scale-110">
-                        <h2 className="text-[100px] sm:text-[120px] md:text-[140px] font-bold text-white/90 leading-none drop-shadow-sm font-sans tracking-tighter">
+                        <h2 className="text-[120px] sm:text-[150px] md:text-[180px] font-bold text-white/90 leading-none drop-shadow-sm font-sans tracking-tighter">
                             {project.logoText}
                         </h2>
                     </div>
@@ -44,8 +44,8 @@ const Card = ({ project }) => {
 
                 {/* Title & Category */}
                 <div className="flex items-end justify-between mt-2">
-                    <h3 className="text-lg sm:text-xl md:text-2xl font-bold font-display tracking-tight text-white">{project.title}</h3>
-                    <span className="text-[10px] sm:text-xs font-medium text-gray-400 uppercase tracking-widest mb-0.5 sm:mb-1">{project.category}</span>
+                    <h3 className="text-xl sm:text-2xl md:text-3xl font-bold font-display tracking-tight text-white">{project.title}</h3>
+                    <span className="text-xs sm:text-sm font-medium text-gray-400 uppercase tracking-widest mb-0.5 sm:mb-1">{project.category}</span>
                 </div>
             </div>
         </Link>

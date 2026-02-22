@@ -44,14 +44,11 @@ const Footer = () => {
                     <div className="flex flex-col gap-6">
                         <h4 className="text-xl sm:text-2xl font-bold font-display tracking-tight">Services</h4>
                         <ul className="flex flex-col gap-3">
-                            <li><Link to="/about" className="text-sm sm:text-base text-gray-400 font-medium hover:text-white transition-colors">Website Development</Link></li>
-                            <li><Link to="/careers" className="text-sm sm:text-base text-gray-400 font-medium hover:text-white transition-colors">UI/UX Design</Link></li>
-                            <li><Link to="/privacy" className="text-sm sm:text-base text-gray-400 font-medium hover:text-white transition-colors">E-Commerce Development</Link></li>
-                            <li><Link to="/privacy" className="text-sm sm:text-base text-gray-400 font-medium hover:text-white transition-colors">Digital Marketing</Link></li>
-                            <li><Link to="/privacy" className="text-sm sm:text-base text-gray-400 font-medium hover:text-white transition-colors">Content Writing</Link></li>
-                            <li><Link to="/privacy" className="text-sm sm:text-base text-gray-400 font-medium hover:text-white transition-colors">Graphic Design</Link></li>
-                            {/* <li><Link to="/privacy" className="text-sm sm:text-base text-gray-400 font-medium hover:text-white transition-colors">Video Editing</Link></li> */}
-                            {/* <li><Link to="/privacy" className="text-sm sm:text-base text-gray-400 font-medium hover:text-white transition-colors">Brand Identity</Link></li> */}
+                            <li><Link to="/services" className="text-sm sm:text-base text-gray-400 font-medium hover:text-white transition-colors">Website Development</Link></li>
+                            <li><Link to="/services" className="text-sm sm:text-base text-gray-400 font-medium hover:text-white transition-colors">UI/UX Design</Link></li>
+                            <li><Link to="/services" className="text-sm sm:text-base text-gray-400 font-medium hover:text-white transition-colors">E-Commerce Development</Link></li>
+                            <li><Link to="/services" className="text-sm sm:text-base text-gray-400 font-medium hover:text-white transition-colors">Digital Marketing</Link></li>
+                            <li><Link to="/services" className="text-sm sm:text-base text-gray-400 font-medium hover:text-white transition-colors">Graphic Design</Link></li>
                         </ul>
                     </div>
 
@@ -102,7 +99,7 @@ const Footer = () => {
                 </div>
 
                 <div className="uppercase tracking-widest font-bold flex items-center gap-1">
-                    POWERED BY: <span className="text-white ml-2">mudassar</span> <span className="text-primary text-lg px-1">★</span> <span className="text-white">digigitz</span>
+                    POWERED BY: <span className="text-white ml-2"></span> <span className="text-primary text-lg px-1">★</span> <span className="text-white">digigitz</span>
                 </div>
 
                 <div className="flex items-center gap-4">

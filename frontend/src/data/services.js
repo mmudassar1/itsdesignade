@@ -147,16 +147,5 @@ export const services = [
         bgClass: "bg-rose-600",
         description: "Capturing moments and telling stories through high-quality video.",
         relatedProjects: []
-    },
-    {
-        id: 15,
-        title: "Copywriting",
-        category: "Creative • Technical",
-        isLogoCard: true,
-        logoText: "Copy",
-        tags: ["Blog", "UX Writing", "Scripts"],
-        bgClass: "bg-emerald-600",
-        description: "Crafting compelling text that converts and engages.",
-        relatedProjects: []
     }
 ];
